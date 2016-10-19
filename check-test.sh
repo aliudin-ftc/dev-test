@@ -3,13 +3,9 @@
 
 #bin/bash
 
-for i in `find . -type f `; do 
-  echo $i;
-done
-
+echo "Processing $pathname $fixed_pathname"
 echo '{
     "comments": [
-        // First Comment
         {
             "line": 1,
             "id": "some-unique-id-for-the-comment",
@@ -18,12 +14,7 @@ echo '{
                 "placeholder": "some-value"
             }
         },
-
-        // Another Comment
-        {
-            // (see above)
-        }
     ],
 
     "fixed_content": "New Content of the file if it should be changed, or omitted if it should not be changed."
-}'; 
+}'
